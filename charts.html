@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 2: COVID-19 Charts</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+
+<body>
+
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">COVID-19 Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  ​
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="charts.html">Charts</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="table.html">Data</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="withoutny.html">Without NY</a>
+      </li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>COVID-19</h1>
+        <p>The hottest topic of 2020</p>
+      </div>
+    </div>
+
+
+    <p>
+      While states may differ in the number of deaths due to COVID-19, we are one country.
+      Here are two visualizations, one of the death count by state and one of the negative tests by state.
+      Everybody knows that New York is the clear hotspot, but in these graphs we truly see the extremity while also picturing NY as just a piece of the whole.
+    </p>
+
+    <br><br>
+
+    <!-- 
+    <p>Our data is being pulled via API JSON from the COVID Tracking Project. The information is updated daily and is broken down by state.</p>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="myChart"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div> 
+    -->
+
+  <br>
+
+  <canvas id="chart3" width="800" height="600"></canvas>
+  <br><br><br><br>
+  <canvas id="chart4" width="800" height="600"></canvas>
+
+<!--
+  <div class="container">
+    <div class="row margin-top-50">
+      <div class="col-md-2">
+        <aside class="filters">
+          <div class="panel panel-default">
+            <div class="panel-heading">Filter Search</div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="date">Enter a State</label>
+                      <input class="form-control" id="state" type="text" placeholder="state">
+                    </li>
+                  </ul>
+                </div>
+                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+
+
+  <div class="col-md-10">
+    <div id="table-area" class="">
+      <table id="ufo-table" class="table table-striped">
+        <thead>
+          <tr>
+            <th class="table-head">Date</th>
+            <th class="table-head">State</th>
+            <th class="table-head">Positive</th>
+            <th class="table-head">Negative</th>
+            <th class="table-head">Pending</th>
+            <th class="table-head">Hospitalized Currently</th>
+            <th class="table-head">Recovered</th>
+            <th class="table-head">Deaths</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div> -->
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="app.js"></script>
+  <script src="app2.js"></script>
+  <script src="app3.js"></script>
+  <!-- <script src="chart.js"></script> -->
+  <!-- <script src="chart2.js"></script> -->
+  <script src="chart3.js"></script>
+  <script src="chart4.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- <script src="./static/js/bonus.js"></script> -->
+
+</body>
+
+</html>

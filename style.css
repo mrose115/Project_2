@@ -1,0 +1,135 @@
+body {
+  background: #d3d3d3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-weight: bold
+}
+
+.navbar {
+  color: rgb(121, 121, 121);
+  max-height: 50px;
+  font-size: 15px;
+}
+
+.navigation .navbar-brand{
+	color: #ffffff; 
+	margin-left: 50px; 
+	padding: inherit; 
+	font-weight: bold; 
+	background-color: rgb(167, 39, 39)
+}
+
+.nav-link:hover{
+  color: white;
+  background-color:rgb(167, 39, 39)
+}
+
+.container .col-md-12 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(5, 93, 128);
+  color: white
+}
+
+#chart2 {
+  background-color: white
+}
+
+.panel {
+  background-color: white
+}
+
+.panel-heading {
+  font-weight: bold
+}
+
+#filter-btn:hover {
+  color: white;
+  background-color: rgb(5, 93, 128)
+}
+
+#state-table {
+  background-color: white;
+}
+
+.table-head {
+  background-color: white
+}
+
+#currentData {
+  border-radius: 8px;
+}
+
+#bubble::before {
+  position: absolute;
+  top: 70px;
+  left: 270px;
+  z-index: -1;
+  display: block;
+  width: 800px;
+  height: 500px;
+  content: " ";
+  background-image: url("covid-19.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+#bubble2::before {
+  position: absolute;
+  top: 70px;
+  left: 270px;
+  z-index: -1;
+  display: block;
+  width: 800px;
+  height: 500px;
+  content: " ";
+  background-image: url("covid-19.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+.tooltip {
+  position: absolute;
+  width: 135px;
+  height: 60px;
+  padding: 2px;
+  padding-top: 8px;
+  font: 12px sans-serif;
+  color: white;
+  text-align: center;
+  background: #000;
+  border: 0;
+  border-radius: 10px;
+}
+
+.axis-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: #000;
+  text-anchor: middle;
+}
+
+.active {
+  font-weight: bold;
+  fill: #000;
+  fill: #B22222;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #000;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #000;
+  cursor: pointer;
+}
